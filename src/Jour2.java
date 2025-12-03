@@ -64,12 +64,8 @@ public class Jour2 {
         for (Long i = start; i < end+1; i++) {
             String s=String.valueOf(i);
             for (int j = 2; j < s.length()+1; j++) {
-                if(s.length()%j==0) {
-                    if (repetitiveNumber(toTab(s, j))) {
-                        if (!invalidIds.contains(i)) {
-                            invalidIds.add(i);
-                        }
-                    }
+                if(s.length()%j==0 && repetitiveNumber(toTab(s,j)) && !invalidIds.contains(i)) {
+                    invalidIds.add(i);
                 }
             }
         }
