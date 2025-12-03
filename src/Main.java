@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class Main {
     public static String readFile(String filename){
@@ -22,8 +23,9 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        String s=readFile("C:\\Users\\Mariacole\\Documents\\AdventCalendar\\src\\day1.txt");
-        Jour1 j=new Jour1(s,50);
-        j.countZeros();
+        String s=readFile("day2.txt");
+        System.out.println(s);
+        Jour2 j2=new Jour2(s);
+        j2.listInvalid();
     }
 }
